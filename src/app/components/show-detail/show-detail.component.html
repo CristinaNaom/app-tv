@@ -1,30 +1,25 @@
-<div class="container text-center">
-  <div
-    class="card border border-4 border-dark border-opacity-75"
-    *ngIf="show$ | async as show"
-  >
-    <div class="text-center mt-5 mb-3">
+<div class="text-center">
+  <div class="card" *ngIf="show$ | async as show">
+    <div class="text-center pt-5 pb-3">
       <img
         [src]="show.image.medium"
         class="img-fluid"
         style="width: 350px; height: 500px"
       />
     </div>
-    <h2>
-      <strong>{{ show.name }}</strong>
-    </h2>
-    <p>{{ show.premiered | date : "shortDate" }}</p>
-    <p>{{ show.genres }}</p>
     <div>
+      <h2>
+        <strong>{{ show.name }}</strong>
+      </h2>
+      <p>{{ show.premiered | date : "shortDate" }}</p>
+      <p>{{ show.genres }}</p>
       <p>
         <i class="bi bi-star-fill"></i>
         {{ show.rating.average }}
       </p>
-    </div>
-    <div class="d-flex justify-content-center align-items-center mt-3">
-      <div class="card border border-0 w-50">
-        <p [innerHTML]="show.summary">{{ show.summary }}</p>
-      </div>
+        <p [innerHTML]="show.summary" class="my-0 py-2 px-5">
+          {{ show.summary }}
+        </p>
     </div>
   </div>
 </div>

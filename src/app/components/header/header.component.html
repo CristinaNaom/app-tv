@@ -1,7 +1,7 @@
-<div class="container mb-5 bg bg-secondary">
+<div class="pb-5">
   <div class="d-flex justify-content-between">
     <div class="p-2">
-      <h5 routerLink="/" class="btn border border-dark">Home page</h5>
+      <h5 routerLink="/" class="btn btn-dark">Home page</h5>
     </div>
     <div class="p-2">
       <div>
@@ -12,12 +12,12 @@
           id="search"
           type="search"
         />
-        <button type="button">Search</button>
+        <button type="button" class="btn btn-dark">Search</button>
       </div>
 
       <div class="card search">
         <a
-          class="link-dark link-underline link-underline-opacity-0 pb-5"
+          class="link-dark link-underline link-underline-opacity-0"
           *ngFor="let show of shows$ | async"
           [routerLink]="['/shows', show.id]"
         >
